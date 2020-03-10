@@ -8,7 +8,7 @@ export default new Vuex.Store({
     list: [
       {
         id: 1,
-        name: "Текст",
+        name: "Task Group #1",
         notes:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         done: false,
@@ -16,7 +16,7 @@ export default new Vuex.Store({
           {
             id: 1,
             parentId: 1,
-            name: "Текст Суб",
+            name: "Task 1",
             notes:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             done: false
@@ -24,7 +24,63 @@ export default new Vuex.Store({
           {
             id: 2,
             parentId: 1,
-            name: "Текст Суб 2",
+            name: "Task 2",
+            notes: null,
+            done: false
+          }
+        ]
+      },
+      {
+        id: 2,
+        name: "Task Group #2",
+        notes:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        done: false,
+        sublist: [
+          {
+            id: 1,
+            parentId: 2,
+            name: "Task 1",
+            notes:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            done: false
+          },
+          {
+            id: 2,
+            parentId: 2,
+            name: "Task 2",
+            notes: null,
+            done: false
+          },
+          {
+            id: 3,
+            parentId: 2,
+            name: "Task 3",
+            notes:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            done: false
+          }
+        ]
+      },
+      {
+        id: 3,
+        name: "Task Group #3git ",
+        notes:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        done: false,
+        sublist: [
+          {
+            id: 1,
+            parentId: 3,
+            name: "Task 1",
+            notes:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            done: false
+          },
+          {
+            id: 2,
+            parentId: 3,
+            name: "Task 2",
             notes: null,
             done: false
           }
