@@ -125,7 +125,7 @@ export default new Vuex.Store({
         }
       });
     },
-    delateTaskGroup: (state, id) => {
+    deleteTaskGroup: (state, id) => {
       state.list.splice(
         state.list.findIndex(function(t) {
           return t.id === id;
@@ -133,7 +133,7 @@ export default new Vuex.Store({
         1
       );
     },
-    delateTask: (state, payload) => {
+    deleteTask: (state, payload) => {
       state.list.forEach(item => {
         if (item.id === payload[1]) {
           item.sublist.splice(

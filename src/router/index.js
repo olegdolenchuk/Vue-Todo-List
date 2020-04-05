@@ -1,11 +1,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import List from "../views/List.vue";
-import taskGroup from "../views/TaskGroup.vue";
-import Task from "../views/Task.vue";
-import Edit from "../views/Edit.vue";
-import FormAddTask from "../views/FormAddTask.vue";
+import Home from "../pages/Home.vue";
+import List from "../pages/List.vue";
+import TaskGroup from "../pages/TaskGroup.vue";
+import Task from "../pages/Task.vue";
+import Edit from "../pages/Edit.vue";
+import FormAddTask from "../pages/FormAddTask.vue";
 
 Vue.use(VueRouter);
 
@@ -23,7 +23,7 @@ const routes = [
   {
     path: "/taskgroup/:id",
     name: "Task Group",
-    component: taskGroup
+    component: TaskGroup
   },
   {
     path: "/task/:parentId/:id",

@@ -14,9 +14,6 @@ export default {
       default: "Add New Task"
     }
   },
-  data: function() {
-    return {};
-  },
   methods: {
     routerPush: function() {
       this.$router.push({ path: this.linkAddFrom });

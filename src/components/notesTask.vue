@@ -8,9 +8,6 @@ export default {
   props: {
     notes: String,
     sectionClass: String
-  },
-  data: function() {
-    return {};
   }
 };
 </script>

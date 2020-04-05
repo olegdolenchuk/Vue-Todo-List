@@ -9,7 +9,7 @@
     <div v-if="showDelButton" @click="togglePopUp" class="btn">
       <span>× Delete</span>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay" v-bind:class="{ active: overlay }"></div>
     <div class="popup">
       <strong>Are you sure you want to delete this?</strong>
       <div class="w--buttons">
@@ -38,21 +38,22 @@ export default {
     }
   },
   data: function() {
-    return {};
+    return {
+      overlay: false
+    };
   },
   methods: {
     togglePopUp: function() {
-      let overlay = document.querySelector(".overlay");
-      overlay.classList.toggle("active");
+      this.overlay = !this.overlay;
     },
     removeTask: function(...id) {
       let arrIds = [...id];
       if (typeof arrIds[0] === "number" && typeof arrIds[1] === "number") {
-        this.$store.commit("delateTask", arrIds);
+        this.$store.commit("deleteTask", arrIds);
         this.$router.push({ path: `/taskgroup/${arrIds[1]}` });
       }
       if (typeof arrIds[0] === "number" && typeof arrIds[1] === "undefined") {
-        this.$store.commit("delateTaskGroup", arrIds[0]);
+        this.$store.commit("deleteTaskGroup", arrIds[0]);
         this.$router.push({ path: `/list` });
       }
     },

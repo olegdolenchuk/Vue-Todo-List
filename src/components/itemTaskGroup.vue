@@ -12,9 +12,6 @@ export default {
     itemList: Object,
     routerLink: String
   },
-  data: function() {
-    return {};
-  },
   methods: {
     routerPush: function() {
       if (this.itemList.parentId) {
